@@ -1,0 +1,52 @@
+{
+  "website-starter-collection": [
+    "/previews/website-starter-collection-1.jpg",
+    "/previews/website-starter-collection-2.jpg",
+    "/previews/website-starter-collection-3.jpg",
+    "/previews/website-starter-collection-4.jpg",
+    "/previews/website-starter-collection-5.jpg"
+  ],
+  "business-website-starter-kit": [
+    "/previews/business-website-starter-kit-1.jpg",
+    "/previews/business-website-starter-kit-2.jpg",
+    "/previews/business-website-starter-kit-3.jpg"
+  ],
+  "saas-landing-page-starter-kit": [
+    "/previews/saas-landing-page-starter-kit-1.jpg",
+    "/previews/saas-landing-page-starter-kit-2.jpg",
+    "/previews/saas-landing-page-starter-kit-3.jpg"
+  ],
+  "admin-dashboard-ui-starter-kit": [
+    "/previews/admin-dashboard-ui-starter-kit-1.jpg",
+    "/previews/admin-dashboard-ui-starter-kit-2.jpg",
+    "/previews/admin-dashboard-ui-starter-kit-3.jpg"
+  ],
+  "ecommerce-ui-starter-kit": [
+    "/previews/ecommerce-ui-starter-kit-1.jpg",
+    "/previews/ecommerce-ui-starter-kit-2.jpg",
+    "/previews/ecommerce-ui-starter-kit-3.jpg"
+  ],
+  "portfolio-website-starter-kit": [
+    "/previews/portfolio-website-starter-kit-1.jpg",
+    "/previews/portfolio-website-starter-kit-2.jpg"
+  ],
+  "small-business-finance-tracker": [
+    "/previews/small-business-finance-tracker-1.jpg",
+    "/previews/small-business-finance-tracker-2.jpg",
+    "/previews/small-business-finance-tracker-3.jpg"
+  ],
+  "freelance-project-management-template": [
+    "/previews/freelance-project-management-template-1.jpg",
+    "/previews/freelance-project-management-template-2.jpg",
+    "/previews/freelance-project-management-template-3.jpg"
+  ],
+  "developer-portfolio-components-pack": [
+    "/previews/developer-portfolio-components-pack-1.jpg"
+  ],
+  "small-business-website-bundle": [
+    "/previews/small-business-website-bundle-1.jpg",
+    "/previews/small-business-website-bundle-2.jpg",
+    "/previews/small-business-website-bundle-3.jpg",
+    "/previews/small-business-website-bundle-4.jpg"
+  ]
+}

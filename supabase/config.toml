@@ -1,0 +1,49 @@
+# Supabase CLI project configuration (local development + function settings).
+project_id = "codevantasolutionsltd"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[auth]
+enabled = true
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173/auth/callback", "http://localhost:5173/reset-password"]
+jwt_expiry = 3600
+enable_signup = true
+minimum_password_length = 10
+
+[auth.email]
+enable_signup = true
+enable_confirmations = true
+double_confirm_changes = true
+secure_password_change = true
+
+[auth.rate_limit]
+email_sent = 4
+sign_in_sign_ups = 30
+token_verifications = 30
+
+[storage]
+enabled = true
+file_size_limit = "500MiB"
+
+# The webhook is authenticated by the Razorpay HMAC signature, not a Supabase JWT.
+[functions.payment-webhook]
+verify_jwt = false
+
+# Public forms are anonymous; abuse is handled by validation, a honeypot and rate limits.
+[functions.submit-form]
+verify_jwt = false
+
+[functions.create-order]
+verify_jwt = true
+
+[functions.download]
+verify_jwt = true

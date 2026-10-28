@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orders — Halvane Admin</title>
+  <meta name="description" content="Orders table of the Admin Dashboard Starter. All data is fictional.">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/logic.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/orders.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="app">
+    <!-- ===== Sidebar (shared) ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+      <a class="sidebar-brand" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#2f5bd3"/><path d="M9 22V10M16 22V14M23 22V8" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="nav-label">Halvane Admin</span>
+      </a>
+      <nav class="side-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" title="Overview">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+            <span class="nav-label">Overview</span></a></li>
+          <li><a href="orders.html" aria-current="page" title="Orders">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 3h12l2 4v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7z"/><path d="M4 7h16M9 11h6"/></svg>
+            <span class="nav-label">Orders</span></a></li>
+          <li><a href="settings.html" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+            <span class="nav-label">Settings</span></a></li>
+        </ul>
+      </nav>
+      <p class="sidebar-foot">Demo workspace · fictional data</p>
+    </aside>
+    <div class="backdrop" data-backdrop hidden></div>
+
+    <div class="main-area">
+      <!-- ===== Top bar (shared) ===== -->
+      <header class="topbar">
+        <button class="icon-btn" type="button" data-sidebar-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <form class="search" role="search" action="orders.html" method="get">
+          <label class="visually-hidden" for="global-search">Search orders</label>
+          <input type="search" id="global-search" name="q" placeholder="Search orders…" autocomplete="off">
+          <button class="icon-btn" type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <div class="topbar-user">
+          <span class="avatar" aria-hidden="true">RM</span>
+          <span class="user-name">Rowan Mistle</span>
+        </div>
+      </header>
+
+      <main id="main" class="content">
+        <div class="page-head">
+          <div>
+            <h1>Orders</h1>
+            <p>Search, filter and sort sample orders. All records are fictional.</p>
+          </div>
+        </div>
+
+        <div class="toolbar" id="orders-filters">
+          <div class="field">
+            <label for="order-search">Search by order, customer or email</label>
+            <input type="search" id="order-search" autocomplete="off" aria-describedby="table-summary">
+          </div>
+          <div class="field">
+            <label for="status-filter">Status</label>
+            <select id="status-filter">
+              <option value="all">All statuses</option>
+              <option value="Paid">Paid</option>
+              <option value="Pending">Pending</option>
+              <option value="Shipped">Shipped</option>
+              <option value="Refunded">Refunded</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="page-size">Rows per page</label>
+            <select id="page-size">
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+        </div>
+
+        <p id="table-summary" role="status">Loading orders…</p>
+
+        <div class="table-wrap">
+          <table id="orders-table">
+            <caption class="visually-hidden">Orders. Column headers with buttons can be sorted.</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-sort-key="id"><button class="sort-btn" type="button">Order <svg class="sort-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 2l4 6H2z" fill="currentColor"/></svg></button></th>
+                <th scope="col" data-sort-key="customer"><button class="sort-btn" type="button">Customer <svg class="sort-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 2l4 6H2z" fill="currentColor"/></svg></button></th>
+                <th scope="col" data-sort-key="date" aria-sort="descending"><button class="sort-btn" type="button">Date <svg class="sort-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 2l4 6H2z" fill="currentColor"/></svg></button></th>
+                <th scope="col" data-sort-key="channel"><button class="sort-btn" type="button">Channel <svg class="sort-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 2l4 6H2z" fill="currentColor"/></svg></button></th>
+                <th scope="col" class="num" data-sort-key="items"><button class="sort-btn" type="button">Items <svg class="sort-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 2l4 6H2z" fill="currentColor"/></svg></button></th>
+                <th scope="col" class="num" data-sort-key="total"><button class="sort-btn" type="button">Total <svg class="sort-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 2l4 6H2z" fill="currentColor"/></svg></button></th>
+                <th scope="col" data-sort-key="status"><button class="sort-btn" type="button">Status <svg class="sort-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 2l4 6H2z" fill="currentColor"/></svg></button></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td colspan="7">The orders table requires JavaScript.</td></tr>
+            </tbody>
+          </table>
+          <p class="empty-state" id="empty-state" hidden>No orders match. Try a different search or status.</p>
+        </div>
+
+        <nav class="pagination" aria-label="Orders pagination">
+          <ul id="pager"></ul>
+        </nav>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

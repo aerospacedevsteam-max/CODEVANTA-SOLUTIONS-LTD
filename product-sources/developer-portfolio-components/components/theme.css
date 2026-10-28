@@ -1,0 +1,122 @@
+/*
+ * cv-* component theme.
+ * Link this file once in your page. Override any variable on :root (or on a
+ * wrapper element) to restyle every component. Dark values apply when
+ * <html data-theme="dark"> is set (by <cv-theme-toggle>) or, when no explicit
+ * choice is stored, when the operating system prefers a dark scheme.
+ */
+:root {
+  color-scheme: light;
+
+  /* Typography */
+  --cv-font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --cv-font-heading: var(--cv-font-body);
+  --cv-font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Colours (light) */
+  --cv-color-bg: #f7f8fa;
+  --cv-color-surface: #ffffff;
+  --cv-color-surface-alt: #eef1f5;
+  --cv-color-text: #1b1f24;
+  --cv-color-heading: #0f1419;
+  --cv-color-muted: #555e6b;
+  --cv-color-border: #d5dbe3;
+  --cv-color-accent: #2f5bd3;
+  --cv-color-accent-hover: #1d3f9e;
+  --cv-color-accent-soft: #e7edfc;
+  --cv-color-on-accent: #ffffff;
+  --cv-color-link: #2f5bd3;
+  --cv-color-link-hover: #1d3f9e;
+  --cv-color-focus: #f59e0b;
+  --cv-color-danger: #b42318;
+  --cv-color-danger-soft: #fdecea;
+  --cv-color-success: #146c43;
+  --cv-color-success-soft: #e6f4ea;
+  --cv-color-tag-bg: #eef1f5;
+  --cv-color-tag-text: #2b3440;
+
+  /* Shape and motion */
+  --cv-radius-sm: 8px;
+  --cv-radius-md: 14px;
+  --cv-radius-pill: 999px;
+  --cv-shadow-card: 0 1px 2px rgb(15 20 25 / 6%), 0 4px 16px rgb(15 20 25 / 6%);
+  --cv-focus-width: 3px;
+  --cv-duration: 160ms;
+  --cv-space: 1rem;
+  --cv-grid-min: 16rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --cv-color-bg: #0f1318;
+    --cv-color-surface: #171c23;
+    --cv-color-surface-alt: #1f2630;
+    --cv-color-text: #e3e8ef;
+    --cv-color-heading: #f5f7fa;
+    --cv-color-muted: #a3adbb;
+    --cv-color-border: #2e3742;
+    --cv-color-accent: #7aa2ff;
+    --cv-color-accent-hover: #a8c1ff;
+    --cv-color-accent-soft: #1d2a47;
+    --cv-color-on-accent: #0b1020;
+    --cv-color-link: #8fb0ff;
+    --cv-color-link-hover: #bcd0ff;
+    --cv-color-focus: #fbbf24;
+    --cv-color-danger: #ff8a80;
+    --cv-color-danger-soft: #3a1d1d;
+    --cv-color-success: #6ee7a8;
+    --cv-color-success-soft: #14301f;
+    --cv-color-tag-bg: #232b36;
+    --cv-color-tag-text: #d5dde8;
+    --cv-shadow-card: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 16px rgb(0 0 0 / 30%);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --cv-color-bg: #0f1318;
+  --cv-color-surface: #171c23;
+  --cv-color-surface-alt: #1f2630;
+  --cv-color-text: #e3e8ef;
+  --cv-color-heading: #f5f7fa;
+  --cv-color-muted: #a3adbb;
+  --cv-color-border: #2e3742;
+  --cv-color-accent: #7aa2ff;
+  --cv-color-accent-hover: #a8c1ff;
+  --cv-color-accent-soft: #1d2a47;
+  --cv-color-on-accent: #0b1020;
+  --cv-color-link: #8fb0ff;
+  --cv-color-link-hover: #bcd0ff;
+  --cv-color-focus: #fbbf24;
+  --cv-color-danger: #ff8a80;
+  --cv-color-danger-soft: #3a1d1d;
+  --cv-color-success: #6ee7a8;
+  --cv-color-success-soft: #14301f;
+  --cv-color-tag-bg: #232b36;
+  --cv-color-tag-text: #d5dde8;
+  --cv-shadow-card: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 16px rgb(0 0 0 / 30%);
+}
+
+/* Block-level by default, even before the modules have loaded. */
+cv-hero,
+cv-project-card,
+cv-project-grid,
+cv-skill-list,
+cv-timeline,
+cv-contact-form {
+  display: block;
+}
+
+/* Utility for light-DOM content (e.g. extra slotted links): hide visually, keep for screen readers. */
+.cv-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

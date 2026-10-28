@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop all — Fernwick Goods</title>
+  <meta name="description" content="Product listing page of the E-commerce UI Starter. Fernwick Goods is a fictional brand.">
+  <link rel="stylesheet" href="assets/css/shop.css">
+  <script src="assets/js/catalog.js" defer></script>
+  <script src="assets/js/cart-core.js" defer></script>
+  <script src="assets/js/shop.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <p class="demo-banner">Demo store with fictional products. Nothing here can be bought.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="products.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#1f4d3f"/><path d="M16 25V11M16 15c-4-1-6-4-6-7 4 0 6 3 6 7zM16 19c4-1 6-4 6-7-4 0-6 3-6 7z" fill="none" stroke="#fff" stroke-width="2"/></svg>
+        Fernwick Goods
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="products.html" aria-current="page">Shop</a></li>
+          <li><a href="cart.html">Cart <span class="cart-count" data-cart-count aria-hidden="true">0</span><span class="visually-hidden" data-cart-label>, 0 items</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <div class="listing-head">
+      <div>
+        <h1>Shop all</h1>
+        <p id="result-count" class="meta" role="status">Loading products…</p>
+      </div>
+      <div class="listing-tools">
+        <button class="btn btn-secondary filter-toggle" type="button" data-filters-open aria-controls="filters" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M3 5h18M6 12h12M10 19h4"/></svg>
+          Filters
+        </button>
+        <div class="field">
+          <label for="sort">Sort by</label>
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="rating">Top rated</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="listing">
+      <aside class="filters" id="filters" aria-labelledby="filters-title">
+        <div class="filters-head">
+          <h2 id="filters-title">Filters</h2>
+          <button class="btn btn-secondary filters-close" type="button" data-filters-close>Close</button>
+        </div>
+        <form id="filters-form">
+          <fieldset>
+            <legend>Category</legend>
+            <label class="check"><input type="checkbox" name="category[]" value="Kitchen"> Kitchen</label>
+            <label class="check"><input type="checkbox" name="category[]" value="Living"> Living</label>
+            <label class="check"><input type="checkbox" name="category[]" value="Lighting"> Lighting</label>
+            <label class="check"><input type="checkbox" name="category[]" value="Textiles"> Textiles</label>
+          </fieldset>
+          <fieldset>
+            <legend>Colour</legend>
+            <label class="check"><input type="checkbox" name="color[]" value="Clay"> <span class="swatch-dot swatch-clay"></span> Clay</label>
+            <label class="check"><input type="checkbox" name="color[]" value="Sage"> <span class="swatch-dot swatch-sage"></span> Sage</label>
+            <label class="check"><input type="checkbox" name="color[]" value="Ink"> <span class="swatch-dot swatch-ink"></span> Ink</label>
+            <label class="check"><input type="checkbox" name="color[]" value="Oat"> <span class="swatch-dot swatch-oat"></span> Oat</label>
+            <label class="check"><input type="checkbox" name="color[]" value="Rose"> <span class="swatch-dot swatch-rose"></span> Rose</label>
+            <label class="check"><input type="checkbox" name="color[]" value="Mustard"> <span class="swatch-dot swatch-mustard"></span> Mustard</label>
+          </fieldset>
+          <fieldset>
+            <legend>Price</legend>
+            <label class="visually-hidden" for="max-price">Maximum price</label>
+            <select id="max-price" name="max-price">
+              <option value="">Any price</option>
+              <option value="2500">Under $25</option>
+              <option value="5000">Under $50</option>
+              <option value="10000">Under $100</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Availability</legend>
+            <label class="check"><input type="checkbox" name="in-stock" id="in-stock"> In stock only</label>
+          </fieldset>
+          <div class="step-actions">
+            <button class="btn btn-secondary" type="reset">Clear filters</button>
+            <button class="btn btn-primary filters-close" type="submit">Show results</button>
+          </div>
+        </form>
+      </aside>
+      <div class="drawer-backdrop" data-drawer-backdrop hidden></div>
+
+      <section aria-labelledby="results-title">
+        <h2 id="results-title" class="visually-hidden">Products</h2>
+        <ul class="product-grid" id="product-grid">
+          <li class="empty">Product listing requires JavaScript.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fernwick Goods is a fictional brand created for the E-commerce UI Starter.</p>
+    </div>
+  </footer>
+</body>
+</html>

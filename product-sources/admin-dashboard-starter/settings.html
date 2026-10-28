@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings — Halvane Admin</title>
+  <meta name="description" content="Settings page of the Admin Dashboard Starter.">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="app">
+    <!-- ===== Sidebar (shared) ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+      <a class="sidebar-brand" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#2f5bd3"/><path d="M9 22V10M16 22V14M23 22V8" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="nav-label">Halvane Admin</span>
+      </a>
+      <nav class="side-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" title="Overview">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+            <span class="nav-label">Overview</span></a></li>
+          <li><a href="orders.html" title="Orders">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 3h12l2 4v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7z"/><path d="M4 7h16M9 11h6"/></svg>
+            <span class="nav-label">Orders</span></a></li>
+          <li><a href="settings.html" aria-current="page" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+            <span class="nav-label">Settings</span></a></li>
+        </ul>
+      </nav>
+      <p class="sidebar-foot">Demo workspace · fictional data</p>
+    </aside>
+    <div class="backdrop" data-backdrop hidden></div>
+
+    <div class="main-area">
+      <!-- ===== Top bar (shared) ===== -->
+      <header class="topbar">
+        <button class="icon-btn" type="button" data-sidebar-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <form class="search" role="search" action="orders.html" method="get">
+          <label class="visually-hidden" for="global-search">Search orders</label>
+          <input type="search" id="global-search" name="q" placeholder="Search orders…" autocomplete="off">
+          <button class="icon-btn" type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <div class="topbar-user">
+          <span class="avatar" aria-hidden="true">RM</span>
+          <span class="user-name">Rowan Mistle</span>
+        </div>
+      </header>
+
+      <main id="main" class="content">
+        <div class="page-head">
+          <div>
+            <h1>Settings</h1>
+            <p>Forms are front-end only. Connect them to your API before use.</p>
+          </div>
+        </div>
+
+        <div class="tablist" role="tablist" aria-label="Settings sections">
+          <button class="tab" type="button" role="tab" id="tab-profile" aria-controls="panel-profile" aria-selected="true">Profile</button>
+          <button class="tab" type="button" role="tab" id="tab-notifications" aria-controls="panel-notifications" aria-selected="false" tabindex="-1">Notifications</button>
+          <button class="tab" type="button" role="tab" id="tab-security" aria-controls="panel-security" aria-selected="false" tabindex="-1">Security</button>
+        </div>
+
+        <div class="card" role="tabpanel" id="panel-profile" aria-labelledby="tab-profile" tabindex="0">
+          <form data-demo-form>
+            <div class="form-grid two-col">
+              <div class="field">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" value="Rowan" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last-name" value="Mistle" autocomplete="family-name" required>
+              </div>
+              <div class="field span-2">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="rowan.mistle@example.com" autocomplete="email" required aria-describedby="email-hint">
+                <p class="hint" id="email-hint">Used for sign-in and account notices.</p>
+              </div>
+              <div class="field">
+                <label for="timezone">Time zone</label>
+                <select id="timezone" name="timezone">
+                  <option>UTC</option>
+                  <option selected>Europe/London</option>
+                  <option>America/New_York</option>
+                  <option>Asia/Singapore</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="language">Language</label>
+                <select id="language" name="language">
+                  <option selected>English</option>
+                  <option>Deutsch</option>
+                  <option>Español</option>
+                </select>
+              </div>
+              <div class="field span-2">
+                <label for="bio">Short bio</label>
+                <textarea id="bio" name="bio" maxlength="240" aria-describedby="bio-hint">Operations lead at a fictional supply company.</textarea>
+                <p class="hint" id="bio-hint">Maximum 240 characters.</p>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Save profile</button>
+              <button class="btn btn-secondary" type="reset">Discard</button>
+              <p class="form-status" data-form-status role="status"></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="card" role="tabpanel" id="panel-notifications" aria-labelledby="tab-notifications" tabindex="0" hidden>
+          <form data-demo-form>
+            <div class="form-grid">
+              <fieldset>
+                <legend>Email notifications</legend>
+                <div class="toggle-row">
+                  <div>
+                    <label for="n-orders">New orders</label>
+                    <p id="n-orders-desc">An email for every order over the review threshold.</p>
+                  </div>
+                  <span class="switch"><input type="checkbox" role="switch" id="n-orders" name="n-orders" aria-describedby="n-orders-desc" checked><span class="switch-track"></span></span>
+                </div>
+                <div class="toggle-row">
+                  <div>
+                    <label for="n-refunds">Refund requests</label>
+                    <p id="n-refunds-desc">Alerts when a customer asks for a refund.</p>
+                  </div>
+                  <span class="switch"><input type="checkbox" role="switch" id="n-refunds" name="n-refunds" aria-describedby="n-refunds-desc" checked><span class="switch-track"></span></span>
+                </div>
+                <div class="toggle-row">
+                  <div>
+                    <label for="n-digest">Weekly digest</label>
+                    <p id="n-digest-desc">A Monday summary of revenue and orders.</p>
+                  </div>
+                  <span class="switch"><input type="checkbox" role="switch" id="n-digest" name="n-digest" aria-describedby="n-digest-desc"><span class="switch-track"></span></span>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Digest frequency</legend>
+                <div class="radio-list">
+                  <label><input type="radio" name="frequency" value="daily"> Daily</label>
+                  <label><input type="radio" name="frequency" value="weekly" checked> Weekly</label>
+                  <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Save notifications</button>
+              <p class="form-status" data-form-status role="status"></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="card" role="tabpanel" id="panel-security" aria-labelledby="tab-security" tabindex="0" hidden>
+          <form data-demo-form>
+            <div class="form-grid">
+              <div class="field">
+                <label for="current-password">Current password</label>
+                <input type="password" id="current-password" name="current-password" autocomplete="current-password" required>
+              </div>
+              <div class="field">
+                <label for="new-password">New password</label>
+                <input type="password" id="new-password" name="new-password" autocomplete="new-password" minlength="12" required aria-describedby="pw-hint">
+                <p class="hint" id="pw-hint">At least 12 characters. Password rules must also be enforced on your server.</p>
+              </div>
+              <div class="toggle-row">
+                <div>
+                  <label for="two-factor">Two-step verification</label>
+                  <p id="two-factor-desc">Ask for a one-time code at sign-in.</p>
+                </div>
+                <span class="switch"><input type="checkbox" role="switch" id="two-factor" name="two-factor" aria-describedby="two-factor-desc"><span class="switch-track"></span></span>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Update security</button>
+              <p class="form-status" data-form-status role="status"></p>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Component guide — SaaS Landing Starter</title>
+  <meta name="description" content="Reference for every reusable block in the SaaS Landing Starter kit, with copy-paste notes.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#3b3fc4"/><path d="M7 12h18M7 17h18M7 22h12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span>Tidegrid</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Landing page</a></li>
+          <li><a href="components.html" aria-current="page">Components</a></li>
+          <li class="nav-cta"><a class="btn btn-primary" href="index.html#pricing">View pricing block</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container docs-layout">
+    <nav class="docs-toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">Blocks</h2>
+      <ol>
+        <li><a href="#doc-tokens">Design tokens</a></li>
+        <li><a href="#doc-header">Header &amp; mobile nav</a></li>
+        <li><a href="#doc-hero">Hero with UI mock</a></li>
+        <li><a href="#doc-logos">Logo cloud</a></li>
+        <li><a href="#doc-features">Feature grid</a></li>
+        <li><a href="#doc-media">Media rows</a></li>
+        <li><a href="#doc-pricing">Pricing table</a></li>
+        <li><a href="#doc-compare">Comparison list</a></li>
+        <li><a href="#doc-faq">FAQ accordion</a></li>
+        <li><a href="#doc-cta">Final CTA</a></li>
+        <li><a href="#doc-footer">Footer</a></li>
+      </ol>
+    </nav>
+
+    <div>
+      <h1>Component guide</h1>
+      <p>Every section of <a href="index.html">the landing page</a> is a self-contained block. Copy the HTML between its <code>&lt;!-- ===== Name ===== --&gt;</code> comments in <code>index.html</code>, keep the shared stylesheet, and include the scripts listed for that block. Blocks without JavaScript work on their own.</p>
+
+      <section class="docs-block" id="doc-tokens" aria-labelledby="doc-tokens-title">
+        <h2 id="doc-tokens-title">Design tokens</h2>
+        <p>All colours, type sizes, radii and spacing are custom properties in the single <code>:root</code> block at the top of <code>assets/css/styles.css</code>. Change the brand colour once and every button, badge and focus state follows.</p>
+        <pre><code>:root {
+  --color-primary: #3b3fc4;       /* buttons, links, highlights */
+  --color-primary-hover: #2e31a3; /* keep 4.5:1 contrast with white */
+  --color-accent: #0d7d6c;        /* eyebrows, ticks */
+  --font-sans: system-ui, ...;    /* swap in a self-hosted font */
+  --radius: 12px;
+}</code></pre>
+        <p>When you change a colour, re-check text contrast (4.5:1 for body text, 3:1 for large text and UI outlines).</p>
+      </section>
+
+      <section class="docs-block" id="doc-header" aria-labelledby="doc-header-title">
+        <h2 id="doc-header-title">Header &amp; mobile nav</h2>
+        <dl>
+          <dt>Classes</dt><dd><code>.site-header</code>, <code>.nav-toggle</code>, <code>.primary-nav</code></dd>
+          <dt>Script</dt><dd><code>main.js</code> (initNav)</dd>
+          <dt>Breakpoint</dt><dd>Menu collapses below 900px</dd>
+        </dl>
+        <p>The toggle button must keep <code>aria-controls</code> pointing at the nav’s <code>id</code>. The script updates <code>aria-expanded</code> and the button label, closes on <kbd>Esc</kbd> and returns focus to the button. Without JavaScript (<code>no-js</code> class on <code>&lt;html&gt;</code>) the links are shown inline.</p>
+        <pre><code>&lt;button class="nav-toggle" type="button" data-nav-toggle
+        aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"&gt;…&lt;/button&gt;
+&lt;nav id="primary-nav" class="primary-nav" aria-label="Primary"&gt;…&lt;/nav&gt;</code></pre>
+      </section>
+
+      <section class="docs-block" id="doc-hero" aria-labelledby="doc-hero-title">
+        <h2 id="doc-hero-title">Hero with product UI mock</h2>
+        <dl>
+          <dt>Classes</dt><dd><code>.hero</code>, <code>.hero-grid</code>, <code>.mock</code> and <code>.mock-*</code></dd>
+          <dt>Script</dt><dd>None</dd>
+        </dl>
+        <p>The mock is built from empty elements and one inline SVG, so it scales crisply and costs no image requests. It carries <code>role="img"</code> with a descriptive <code>aria-label</code>; update that label if you change what the mock shows. To use a real screenshot instead, replace the <code>.mock</code> element with an <code>&lt;img&gt;</code> that has meaningful <code>alt</code> text and explicit <code>width</code>/<code>height</code>.</p>
+      </section>
+
+      <section class="docs-block" id="doc-logos" aria-labelledby="doc-logos-title">
+        <h2 id="doc-logos-title">Logo cloud (placeholder)</h2>
+        <p>Ships as six dashed placeholder slots with a heading that says so. Only add logos of organisations that have agreed to be shown. Replace each <code>&lt;li class="logo-slot"&gt;</code> text with an SVG or image whose <code>alt</code> is the organisation name, and change the heading to something like “Trusted by teams at”.</p>
+      </section>
+
+      <section class="docs-block" id="doc-features" aria-labelledby="doc-features-title">
+        <h2 id="doc-features-title">Feature grid</h2>
+        <dl>
+          <dt>Classes</dt><dd><code>.feature-grid</code>, <code>.feature-card</code>, <code>.feature-icon</code></dd>
+          <dt>Layout</dt><dd>Auto-fit grid, minimum card width 16rem</dd>
+        </dl>
+        <pre><code>&lt;li class="feature-card"&gt;
+  &lt;div class="feature-icon"&gt;&lt;svg aria-hidden="true" focusable="false" …&gt;…&lt;/svg&gt;&lt;/div&gt;
+  &lt;h3&gt;Feature name&lt;/h3&gt;
+  &lt;p&gt;One or two sentences.&lt;/p&gt;
+&lt;/li&gt;</code></pre>
+        <p>Icons are decorative (<code>aria-hidden</code>) because the heading carries the meaning. Icons use <code>currentColor</code>, so they follow <code>--color-primary</code>.</p>
+      </section>
+
+      <section class="docs-block" id="doc-media" aria-labelledby="doc-media-title">
+        <h2 id="doc-media-title">Alternating media rows</h2>
+        <p>Each <code>.media-row</code> has a text column and a <code>&lt;figure class="media-figure"&gt;</code>. Add <code>.is-reversed</code> to put the figure first on wide screens; on small screens text always comes first so reading order matches visual order. Meaningful SVG illustrations use <code>role="img"</code> plus a <code>&lt;title&gt;</code> referenced by <code>aria-labelledby</code>; every <code>id</code> must stay unique when you duplicate a row.</p>
+      </section>
+
+      <section class="docs-block" id="doc-pricing" aria-labelledby="doc-pricing-title">
+        <h2 id="doc-pricing-title">Pricing table with monthly/yearly toggle</h2>
+        <dl>
+          <dt>Scripts</dt><dd><code>pricing.js</code> then <code>main.js</code> (initPricing)</dd>
+          <dt>Config</dt><dd><code>data-discount</code> (percent) and <code>data-currency</code> (ISO code) on the toggle wrapper; <code>data-plan-monthly</code> on each plan</dd>
+        </dl>
+        <pre><code>&lt;div data-billing-toggle data-discount="20" data-currency="USD"&gt;
+  &lt;fieldset class="billing-toggle"&gt;…two radio inputs named "billing"…&lt;/fieldset&gt;
+&lt;/div&gt;
+&lt;li class="plan" data-plan-monthly="18"&gt;
+  &lt;span class="plan-amount" data-plan-amount&gt;$18&lt;/span&gt;
+  &lt;p class="plan-billing" data-plan-note&gt;Billed monthly&lt;/p&gt;
+&lt;/li&gt;</code></pre>
+        <p>The toggle is a native radio group, so it is keyboard and screen-reader friendly without extra ARIA. A polite live region announces the change. Keep the monthly price in the HTML as the no-JavaScript fallback. Displayed prices are presentation only; your billing system remains the source of truth.</p>
+      </section>
+
+      <section class="docs-block" id="doc-compare" aria-labelledby="doc-compare-title">
+        <h2 id="doc-compare-title">Comparison list</h2>
+        <p>Two <code>.compare-col</code> cards; add <code>.is-positive</code> to the highlighted column. Avoid naming real competitors unless your claims are accurate and you have checked the legal position in your market.</p>
+      </section>
+
+      <section class="docs-block" id="doc-faq" aria-labelledby="doc-faq-title">
+        <h2 id="doc-faq-title">FAQ accordion</h2>
+        <dl>
+          <dt>Script</dt><dd><code>main.js</code> (initAccordion)</dd>
+          <dt>Keys</dt><dd><kbd>Enter</kbd>/<kbd>Space</kbd> toggle, <kbd>↑</kbd>/<kbd>↓</kbd>/<kbd>Home</kbd>/<kbd>End</kbd> move between questions</dd>
+        </dl>
+        <pre><code>&lt;div class="faq" data-accordion&gt;
+  &lt;div class="faq-item"&gt;
+    &lt;h3&gt;&lt;button class="faq-trigger" type="button" id="q1"
+        aria-expanded="false" aria-controls="a1"&gt;Question&lt;/button&gt;&lt;/h3&gt;
+    &lt;section class="faq-panel" id="a1" aria-labelledby="q1"&gt;&lt;p&gt;Answer&lt;/p&gt;&lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p>Panels are visible when JavaScript is off; the script hides the ones whose button says <code>aria-expanded="false"</code>.</p>
+      </section>
+
+      <section class="docs-block" id="doc-cta" aria-labelledby="doc-cta-title">
+        <h2 id="doc-cta-title">Final CTA</h2>
+        <p><code>.cta-band</code> on a dark surface with <code>.btn-light</code> and a light-coloured <code>.btn-outline</code>. If you change <code>--color-dark</code>, confirm the text still meets contrast.</p>
+      </section>
+
+      <section class="docs-block" id="doc-footer" aria-labelledby="doc-footer-title">
+        <h2 id="doc-footer-title">Footer</h2>
+        <p>Auto-fit columns. Each link group is a <code>&lt;nav&gt;</code> labelled by its heading so screen-reader users can tell the landmarks apart. The year is filled in by <code>main.js</code> from any element with <code>data-year</code>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>SaaS Landing Starter — component guide. Tidegrid is a fictional brand.</p>
+      <p><a href="#main">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

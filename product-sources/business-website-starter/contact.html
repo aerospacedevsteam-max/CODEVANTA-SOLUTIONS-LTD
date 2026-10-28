@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Fernvale Studio</title>
+  <meta name="description" content="Contact Fernvale Studio (placeholder) to arrange a free introductory call.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#f2a541"/><path d="M9 22 16 8l7 14z" fill="#0a3a3e"/></svg>
+        Fernvale Studio
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        Menu
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1 id="page-title">Let’s talk</h1>
+        <p class="lead">Tell us a little about your project and we will reply within two working days (replace with your real response time).</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-title">
+      <div class="container split">
+        <div>
+          <h2 id="form-title">Send an enquiry</h2>
+          <!--
+            FORM BACKEND REQUIRED
+            This form only validates in the browser and shows a local demo message.
+            Nothing is sent anywhere until you connect it to a backend, for example:
+              - a hosted form service: set action="https://<your-form-service-endpoint>"
+              - your own server: set action="/api/contact" and handle the POST there
+            Then set method="post" and remove event.preventDefault() in assets/js/main.js.
+          -->
+          <form class="form" action="#" method="get" novalidate data-contact-form>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+                <p class="error-msg" id="name-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+                <p class="error-msg" id="email-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="company">Company <span class="hint">(optional)</span></label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="topic">What can we help with?</label>
+              <select id="topic" name="topic" required aria-describedby="topic-error">
+                <option value="">Choose a topic</option>
+                <option value="strategy">Growth strategy</option>
+                <option value="design">Brand and web design</option>
+                <option value="delivery">Project delivery</option>
+                <option value="support">Ongoing support</option>
+                <option value="other">Something else</option>
+              </select>
+              <p class="error-msg" id="topic-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required aria-describedby="message-error"></textarea>
+              <p class="error-msg" id="message-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <div class="checkbox">
+                <input id="consent" name="consent" type="checkbox" required aria-describedby="consent-error">
+                <label for="consent">I agree to be contacted about this enquiry.</label>
+              </div>
+              <p class="error-msg" id="consent-error" aria-live="polite"></p>
+            </div>
+            <button class="btn btn-primary" type="submit">Send enquiry</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside aria-labelledby="details-title">
+          <h2 id="details-title">Other ways to reach us</h2>
+          <div class="card">
+            <h3>Email</h3>
+            <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+            <h3>Office</h3>
+            <p>Placeholder address line<br>Your City, AB1 2CD</p>
+            <h3>Hours</h3>
+            <p>Monday to Friday, 9:00 to 17:00</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Fernvale Studio</h2>
+          <p>Placeholder address line<br>Your City, AB1 2CD</p>
+        </div>
+        <nav aria-label="Footer">
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li>Mon–Fri, 9:00–17:00</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© <span data-year>2026</span> Fernvale Studio (placeholder name). All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

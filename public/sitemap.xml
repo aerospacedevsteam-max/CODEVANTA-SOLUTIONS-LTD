@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN.example/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/about</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/contact</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/faqs</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/support</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/terms</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/privacy</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/refund-policy</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/licence</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/cookies</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/website-templates</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/ui-kits</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/admin-dashboards</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/business-website-kits</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/ecommerce-resources</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/saas-resources</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/business-templates</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/developer-resources</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/categories/bundles</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/website-starter-collection</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/business-website-starter-kit</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/saas-landing-page-starter-kit</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/admin-dashboard-ui-starter-kit</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/ecommerce-ui-starter-kit</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/portfolio-website-starter-kit</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/small-business-finance-tracker</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/freelance-project-management-template</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/developer-portfolio-components-pack</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://YOUR-DOMAIN.example/products/small-business-website-bundle</loc><lastmod>2026-10-28</lastmod></url>
+</urlset>

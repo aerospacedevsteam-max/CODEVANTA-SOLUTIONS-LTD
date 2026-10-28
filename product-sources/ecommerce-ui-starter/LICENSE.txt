@@ -1,0 +1,53 @@
+CODEVANTA SOLUTIONS LTD — STANDARD DIGITAL PRODUCT LICENCE
+Version 1.0
+
+This licence applies to the digital product you obtained from CODEVANTA SOLUTIONS LTD
+("we", "us"). By downloading or using the files you agree to these terms.
+
+1. WHAT YOU RECEIVE
+   A non-exclusive, non-transferable, perpetual licence for one licensee (an
+   individual, or one organisation) to use the files included in this product.
+
+2. YOU MAY
+   - Use the files to build an unlimited number of websites, applications,
+     documents or other end products for yourself or for your clients.
+   - Modify, adapt, translate and combine the files with other work.
+   - Use the files in commercial end products that you sell or deliver to a client,
+     provided the files are part of a finished end product and not offered on
+     their own.
+
+3. YOU MAY NOT
+   - Resell, sublicense, share, give away or redistribute the files, in original or
+     modified form, as templates, themes, kits, stock items or source-code products.
+   - Upload the files to any marketplace, template gallery, file-sharing service or
+     public repository where others can download them as stand-alone resources.
+   - Share your download link or account access with anyone outside the licensee.
+   - Claim that you are the original author of the unmodified files.
+   - Use the files in any unlawful, defamatory or infringing product.
+
+4. CLIENT WORK
+   You may transfer an end product built with the files to a single client. The
+   client may use and edit that end product, but may not extract the original
+   files and redistribute them.
+
+5. THIRD-PARTY MATERIAL
+   Unless stated in the product's README, the product contains no third-party
+   images, fonts or libraries. Where third-party material is listed, its own
+   licence applies to that material.
+
+6. NO WARRANTY
+   The files are provided "as is". We test the files as described on the product
+   page, but we do not guarantee that they will be suitable for every purpose or
+   compatible with every environment. Nothing in this licence limits any rights you
+   have under consumer-protection law that cannot be excluded.
+
+7. TERMINATION
+   This licence ends automatically if you breach it. On termination you must stop
+   distributing end products created in breach of these terms.
+
+8. CONTACT AND GOVERNING LAW
+   Licensor: CODEVANTA SOLUTIONS LTD, a company registered in England and
+   Wales (company number 17535159). Registered office: Office 22003,
+   182-184 High Street North, East Ham, E6 2JA, United Kingdom.
+   Support: support@codevantasolutions.com
+   This licence is governed by the law of England and Wales.

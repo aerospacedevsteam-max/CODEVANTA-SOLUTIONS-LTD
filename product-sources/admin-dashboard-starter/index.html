@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview — Halvane Admin</title>
+  <meta name="description" content="Overview page of the Admin Dashboard Starter. All data is fictional.">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/logic.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/charts.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="app">
+    <!-- ===== Sidebar (shared) ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar">
+      <a class="sidebar-brand" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#2f5bd3"/><path d="M9 22V10M16 22V14M23 22V8" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="nav-label">Halvane Admin</span>
+      </a>
+      <nav class="side-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page" title="Overview">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+            <span class="nav-label">Overview</span></a></li>
+          <li><a href="orders.html" title="Orders">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 3h12l2 4v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7z"/><path d="M4 7h16M9 11h6"/></svg>
+            <span class="nav-label">Orders</span></a></li>
+          <li><a href="settings.html" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+            <span class="nav-label">Settings</span></a></li>
+        </ul>
+      </nav>
+      <p class="sidebar-foot">Demo workspace · fictional data</p>
+    </aside>
+    <div class="backdrop" data-backdrop hidden></div>
+
+    <div class="main-area">
+      <!-- ===== Top bar (shared) ===== -->
+      <header class="topbar">
+        <button class="icon-btn" type="button" data-sidebar-toggle aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <form class="search" role="search" action="orders.html" method="get">
+          <label class="visually-hidden" for="global-search">Search orders</label>
+          <input type="search" id="global-search" name="q" placeholder="Search orders…" autocomplete="off">
+          <button class="icon-btn" type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </form>
+        <div class="topbar-user">
+          <span class="avatar" aria-hidden="true">RM</span>
+          <span class="user-name">Rowan Mistle</span>
+        </div>
+      </header>
+
+      <main id="main" class="content">
+        <div class="page-head">
+          <div>
+            <h1>Overview</h1>
+            <p>Brindlewood Supply Co. (fictional) · last 12 months</p>
+          </div>
+          <a class="btn btn-primary" href="orders.html">View all orders</a>
+        </div>
+
+        <h2 class="visually-hidden">Key metrics</h2>
+        <ul class="metric-grid" data-metrics>
+          <li class="card"><p class="metric-label">Metrics load with JavaScript.</p></li>
+        </ul>
+
+        <div class="chart-grid">
+          <section class="card" aria-labelledby="revenue-title">
+            <div class="card-head">
+              <h2 id="revenue-title">Monthly revenue</h2>
+              <p>USD, Nov–Oct</p>
+            </div>
+            <div class="chart" data-chart="revenue" data-title-id="revenue-title" data-summary-id="revenue-summary"></div>
+            <p class="chart-summary" id="revenue-summary">Chart requires JavaScript.</p>
+          </section>
+
+          <section class="card" aria-labelledby="channels-title">
+            <div class="card-head">
+              <h2 id="channels-title">Orders by channel</h2>
+              <p>Last 30 days</p>
+            </div>
+            <div class="chart" data-chart="channels" data-title-id="channels-title" data-summary-id="channels-summary"></div>
+            <p class="chart-summary" id="channels-summary">Chart requires JavaScript.</p>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

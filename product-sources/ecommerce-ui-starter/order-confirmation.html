@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order confirmed — Fernwick Goods</title>
+  <meta name="description" content="Order confirmation page of the E-commerce UI Starter. Demo only.">
+  <link rel="stylesheet" href="assets/css/shop.css">
+  <script src="assets/js/catalog.js" defer></script>
+  <script src="assets/js/cart-core.js" defer></script>
+  <script src="assets/js/shop.js" defer></script>
+  <script src="assets/js/confirmation.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <p class="demo-banner">Demo confirmation. No payment was taken and no order was placed.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="products.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#1f4d3f"/><path d="M16 25V11M16 15c-4-1-6-4-6-7 4 0 6 3 6 7zM16 19c4-1 6-4 6-7-4 0-6 3-6 7z" fill="none" stroke="#fff" stroke-width="2"/></svg>
+        Fernwick Goods
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="cart.html">Cart <span class="cart-count" data-cart-count aria-hidden="true">0</span><span class="visually-hidden" data-cart-label>, 0 items</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container page">
+    <div class="confirm-card" id="order-found">
+      <svg class="confirm-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="21"/><path d="M14 25l7 7 13-15"/></svg>
+      <h1>Thank you<span id="order-name"></span>!</h1>
+      <p>Your demo order <strong id="order-number">—</strong> has been recorded in this browser only. In a live store a confirmation would be emailed to <strong id="order-email">your email address</strong>.</p>
+      <dl class="review-list">
+        <dt>Placed</dt><dd id="order-date">—</dd>
+        <dt>Delivery</dt><dd id="order-shipping">—</dd>
+      </dl>
+
+      <h2>Items</h2>
+      <ul class="mini-lines" id="order-lines"></ul>
+      <div class="summary">
+        <dl>
+          <dt>Subtotal</dt><dd id="order-subtotal">—</dd>
+          <dt>Delivery</dt><dd id="order-delivery">—</dd>
+          <dt class="total">Total</dt><dd class="total" id="order-total">—</dd>
+        </dl>
+      </div>
+      <p><a class="btn btn-primary" href="products.html">Continue shopping</a></p>
+    </div>
+
+    <div class="confirm-card" id="order-missing" hidden>
+      <h1>No recent order found</h1>
+      <p>We couldn’t find a recent demo order in this browser. It may have been cleared, or storage may be disabled.</p>
+      <a class="btn btn-primary" href="products.html">Browse products</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Fernwick Goods is a fictional brand created for the E-commerce UI Starter.</p>
+    </div>
+  </footer>
+</body>
+</html>

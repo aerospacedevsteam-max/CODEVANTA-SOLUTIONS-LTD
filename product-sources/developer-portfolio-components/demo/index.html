@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Developer Portfolio Components — Demo</title>
+  <meta name="description" content="Demo of the cv-* Web Components for developer portfolios. All names and content are placeholders.">
+  <link rel="stylesheet" href="../components/theme.css">
+  <script>
+    // Apply a saved theme before first paint to avoid a light/dark flash.
+    (function () {
+      try {
+        var saved = window.localStorage.getItem('cv-theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+      } catch (e) { /* storage unavailable: fall back to the OS preference */ }
+    })();
+  </script>
+  <script type="module" src="../components/index.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: var(--cv-color-bg);
+      color: var(--cv-color-text);
+      font-family: var(--cv-font-body);
+      line-height: 1.55;
+    }
+    .shell { width: min(72rem, 100% - 2.5rem); margin-inline: auto; }
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      padding: 0.6rem 1rem;
+      background: var(--cv-color-accent);
+      color: var(--cv-color-on-accent);
+      border-radius: var(--cv-radius-sm);
+      z-index: 10;
+    }
+    .skip-link:focus { top: 1rem; }
+    header.site {
+      border-bottom: 1px solid var(--cv-color-border);
+      background: var(--cv-color-surface);
+    }
+    .site-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 4rem;
+    }
+    .wordmark { font-weight: 800; color: var(--cv-color-heading); text-decoration: none; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+    nav a { color: var(--cv-color-text); }
+    a:focus-visible { outline: 3px solid var(--cv-color-focus); outline-offset: 2px; }
+    section.block { padding: 3rem 0; border-top: 1px solid var(--cv-color-border); }
+    section.block > .shell > h2 { margin: 0 0 1.5rem; font-size: 1.75rem; color: var(--cv-color-heading); }
+    .two-col { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+    .hero-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--cv-radius-sm);
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--cv-color-accent);
+    }
+    .hero-link.primary { background: var(--cv-color-accent); color: var(--cv-color-on-accent); }
+    .hero-link.secondary { color: var(--cv-color-accent); }
+    .event-log {
+      margin-top: 1rem;
+      padding: 1rem;
+      min-height: 3rem;
+      background: var(--cv-color-surface-alt);
+      border-radius: var(--cv-radius-sm);
+      font-family: var(--cv-font-mono);
+      font-size: 0.85rem;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    footer { padding: 2rem 0 3rem; color: var(--cv-color-muted); border-top: 1px solid var(--cv-color-border); }
+    code { font-family: var(--cv-font-mono); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site">
+    <div class="shell site-row">
+      <a class="wordmark" href="#main">avery.lindqvist</a>
+      <nav aria-label="Demo sections">
+        <ul>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <cv-theme-toggle label="Dark mode"></cv-theme-toggle>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="shell">
+      <cv-hero
+        eyebrow="Hello, I’m"
+        name="Avery Lindqvist"
+        tagline="Full-stack developer building calm, fast web apps"
+        avatar-src="avatar.svg"
+        avatar-alt="Illustrated avatar placeholder">
+        <p>I design and ship accessible interfaces and the APIs behind them. This page is a demo of the component pack — every name, company and project here is an invented placeholder.</p>
+        <a slot="actions" class="hero-link primary" href="#projects">See my work</a>
+        <a slot="actions" class="hero-link secondary" href="#contact">Get in touch</a>
+      </cv-hero>
+    </div>
+
+    <section class="block" id="skills" aria-labelledby="skills-title">
+      <div class="shell">
+        <h2 id="skills-title">Skills</h2>
+        <div class="two-col">
+          <cv-skill-list
+            heading="Languages"
+            variant="meter"
+            skills="TypeScript:5, Python:4, SQL:4, Go:3, Rust:2"></cv-skill-list>
+          <cv-skill-list
+            heading="Tools &amp; platforms"
+            skills="PostgreSQL:4, Docker:4, Linux:4, CI pipelines:3, Accessibility testing:4"></cv-skill-list>
+          <cv-skill-list
+            heading="Also comfortable with"
+            skills="Web Components, REST, GraphQL, Figma, Technical writing"></cv-skill-list>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="projects" aria-labelledby="projects-title">
+      <div class="shell">
+        <h2 id="projects-title">Projects</h2>
+        <cv-project-grid label="Filter projects by technology">
+          <cv-project-card
+            heading="Tidewater Booking"
+            meta="2026"
+            tags="TypeScript, Web Components, PostgreSQL"
+            href="#projects"
+            repo="#projects"
+            image-src="project-cover.svg"
+            image-alt="">
+            A booking system for a fictional harbour ferry: seat maps, offline-friendly tickets and an accessible checkout.
+          </cv-project-card>
+          <cv-project-card
+            heading="Quietline Notes"
+            meta="2025"
+            tags="Rust, CLI"
+            repo="#projects">
+            A plain-text note-taking CLI with full-text search and sync over a folder of Markdown files.
+          </cv-project-card>
+          <cv-project-card
+            heading="Orchard Metrics"
+            meta="2025"
+            tags="Python, PostgreSQL, Data"
+            href="#projects">
+            Dashboard and ETL pipeline that turns sensor readings from a placeholder orchard into weekly reports.
+          </cv-project-card>
+          <cv-project-card
+            heading="Lanternfish UI"
+            meta="2024"
+            tags="Web Components, Accessibility, Design systems"
+            href="#projects"
+            link-label="Read the case study">
+            A small design system built on Custom Elements, with documented focus, contrast and motion rules.
+            <a slot="links" href="#projects">Storybook<span class="cv-visually-hidden"> for Lanternfish UI</span></a>
+          </cv-project-card>
+          <cv-project-card
+            heading="Ferrous Queue"
+            meta="2024"
+            tags="Go, Docker"
+            repo="#projects">
+            A tiny job queue with retries, dead-letter handling and a status page.
+          </cv-project-card>
+          <cv-project-card
+            heading="Signpost Forms"
+            meta="2023"
+            tags="TypeScript, Accessibility"
+            href="#projects">
+            A form-validation helper that produces clear, screen-reader-friendly error messages.
+          </cv-project-card>
+        </cv-project-grid>
+      </div>
+    </section>
+
+    <section class="block" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <h2 id="experience-title">Experience</h2>
+        <cv-timeline label="Work history">
+          <cv-timeline-item
+            date="2024 — present"
+            datetime="2024"
+            heading="Senior Full-stack Developer"
+            org="Northwind Harbour Software (placeholder)"
+            current>
+            Leads a team of four building booking and payments features. Introduced a component library and automated accessibility checks.
+          </cv-timeline-item>
+          <cv-timeline-item
+            date="2021 — 2024"
+            datetime="2021"
+            heading="Front-end Developer"
+            org="Brightfield Studio (placeholder)">
+            Built marketing sites and web apps for clients in education and healthcare.
+          </cv-timeline-item>
+          <cv-timeline-item
+            date="2018 — 2021"
+            datetime="2018"
+            heading="BSc Computer Science"
+            org="Example University (placeholder)">
+            Dissertation on progressive enhancement for low-bandwidth networks.
+          </cv-timeline-item>
+        </cv-timeline>
+      </div>
+    </section>
+
+    <section class="block" id="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 id="contact-title">Contact</h2>
+        <div class="two-col">
+          <cv-contact-form heading="Send a message" heading-level="3" success-message="Thanks! (Demo only — nothing was sent.)">
+            <p slot="intro">This demo form does not send anything. Submitting a valid form fires a <code>cv-submit</code> event, shown in the log.</p>
+          </cv-contact-form>
+          <div>
+            <h3>Event log</h3>
+            <p>The demo listens for <code>cv-submit</code>, <code>cv-filter-change</code> and <code>cv-theme-change</code>.</p>
+            <output class="event-log" id="event-log" aria-live="polite">No events yet.</output>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <p>Demo of the Developer Portfolio Components pack. All names and content are placeholders.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="demo.js"></script>
+</body>
+</html>

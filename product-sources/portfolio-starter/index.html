@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riley Quinn — Product designer and front-end developer</title>
+  <meta name="description" content="Portfolio of Riley Quinn (placeholder name): product design, front-end development and research.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- theme.js runs immediately (no defer) to apply the saved theme before paint -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="masthead">
+    <div class="shell masthead-row">
+      <a class="wordmark" href="index.html">riley<span>.</span>quinn</a>
+      <nav id="main-nav" class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="icon-button theme-toggle" type="button" aria-pressed="false">
+        <span class="sr-only">Dark theme</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Menu</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="intro-title">
+      <div class="shell intro-grid">
+        <div>
+          <p class="status">Available for freelance work from January (placeholder)</p>
+          <h1 id="intro-title">Hi, I’m Riley. I design and build calm, useful software.</h1>
+          <p class="lede">I’m a product designer and front-end developer with eight years of experience turning messy problems into simple interfaces. Replace this paragraph with your own short bio.</p>
+          <div class="hero-links">
+            <a class="pill-link pill-solid" href="#work">See selected work</a>
+            <a class="pill-link" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="portrait" role="img" aria-label="Abstract gradient shape used as a portrait placeholder"></div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-title">
+          <div>
+            <p class="kicker">// selected work</p>
+            <h2 id="work-title">Projects</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects by tag" data-filters hidden>
+            <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" type="button" data-filter="design" aria-pressed="false">Design</button>
+            <button class="filter-btn" type="button" data-filter="development" aria-pressed="false">Development</button>
+            <button class="filter-btn" type="button" data-filter="research" aria-pressed="false">Research</button>
+            <button class="filter-btn" type="button" data-filter="branding" aria-pressed="false">Branding</button>
+          </div>
+        </div>
+        <p class="result-count" id="result-count" role="status"></p>
+
+        <!-- Each card: set data-tags to space-separated values matching the filter buttons. -->
+        <ul class="projects">
+          <li data-tags="design research">
+            <article class="project-card">
+              <div class="thumb thumb-a"></div>
+              <div class="project-body">
+                <ul class="tags" aria-label="Tags"><li>design</li><li>research</li></ul>
+                <h3>Greenleaf Clinic booking</h3>
+                <p>Redesigned appointment booking for a fictional clinic, cutting steps from nine to four.</p>
+                <a href="project.html">Read case study<span class="sr-only">: Greenleaf Clinic booking</span></a>
+              </div>
+            </article>
+          </li>
+          <li data-tags="development">
+            <article class="project-card">
+              <div class="thumb thumb-b"></div>
+              <div class="project-body">
+                <ul class="tags" aria-label="Tags"><li>development</li></ul>
+                <h3>Tally field app</h3>
+                <p>An offline-first inventory tool for warehouse teams, built with progressive enhancement.</p>
+                <a href="project.html">Read case study<span class="sr-only">: Tally field app</span></a>
+              </div>
+            </article>
+          </li>
+          <li data-tags="branding design">
+            <article class="project-card">
+              <div class="thumb thumb-c"></div>
+              <div class="project-body">
+                <ul class="tags" aria-label="Tags"><li>branding</li><li>design</li></ul>
+                <h3>Orchard Lane Coffee identity</h3>
+                <p>Logo, packaging system and a small website for an imaginary neighbourhood roaster.</p>
+                <a href="project.html">Read case study<span class="sr-only">: Orchard Lane Coffee identity</span></a>
+              </div>
+            </article>
+          </li>
+          <li data-tags="research">
+            <article class="project-card">
+              <div class="thumb thumb-d"></div>
+              <div class="project-body">
+                <ul class="tags" aria-label="Tags"><li>research</li></ul>
+                <h3>Commuter interviews</h3>
+                <p>Twenty interviews and a journey map that reshaped a transit app’s roadmap.</p>
+                <a href="project.html">Read case study<span class="sr-only">: Commuter interviews</span></a>
+              </div>
+            </article>
+          </li>
+          <li data-tags="development design">
+            <article class="project-card">
+              <div class="thumb thumb-e"></div>
+              <div class="project-body">
+                <ul class="tags" aria-label="Tags"><li>development</li><li>design</li></ul>
+                <h3>Signal design system</h3>
+                <p>A component library with documented tokens, accessibility notes and usage examples.</p>
+                <a href="project.html">Read case study<span class="sr-only">: Signal design system</span></a>
+              </div>
+            </article>
+          </li>
+          <li data-tags="branding">
+            <article class="project-card">
+              <div class="thumb thumb-f"></div>
+              <div class="project-body">
+                <ul class="tags" aria-label="Tags"><li>branding</li></ul>
+                <h3>Pebble Kids Library</h3>
+                <p>A playful visual identity and signage for a fictional children’s library.</p>
+                <a href="project.html">Read case study<span class="sr-only">: Pebble Kids Library</span></a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="shell">
+        <p class="kicker">// toolkit</p>
+        <h2 id="skills-title">Skills</h2>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Design</h3>
+            <ul><li>Interaction design</li><li>Prototyping</li><li>Design systems</li><li>Visual design</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Development</h3>
+            <ul><li>HTML and CSS</li><li>JavaScript</li><li>Accessibility</li><li>Performance</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Research</h3>
+            <ul><li>User interviews</li><li>Usability testing</li><li>Journey mapping</li><li>Workshops</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <p class="kicker">// career</p>
+        <h2 id="experience-title">Experience</h2>
+        <ol class="timeline">
+          <li>
+            <h3>Independent designer and developer</h3>
+            <p class="meta mono"><time datetime="2023">2023</time> – present · Remote</p>
+            <p>Product design and front-end builds for small teams and non-profits.</p>
+          </li>
+          <li>
+            <h3>Senior product designer, Brindle Labs (fictional)</h3>
+            <p class="meta mono"><time datetime="2020">2020</time> – <time datetime="2023">2023</time></p>
+            <p>Led design for a scheduling product and set up its first design system.</p>
+          </li>
+          <li>
+            <h3>Front-end developer, Quarry and Pine (fictional)</h3>
+            <p class="meta mono"><time datetime="2017">2017</time> – <time datetime="2020">2020</time></p>
+            <p>Built accessible marketing sites and internal tools for agency clients.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-grid">
+        <div>
+          <p class="kicker">// say hello</p>
+          <h2 id="contact-title">Let’s work together</h2>
+          <p>Have a project in mind? Send a short note and I’ll reply within a few days.</p>
+          <ul class="link-list">
+            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><!-- Add links to your professional profiles here --> Profiles: add your links</li>
+          </ul>
+        </div>
+        <!--
+          FORM BACKEND REQUIRED: this form is validated in the browser only and
+          shows a local demo notice. Nothing is sent. Point action="" at a form
+          service or your own endpoint, use method="post", and remove
+          event.preventDefault() in assets/js/main.js. See README.md.
+        -->
+        <form class="form" id="contact-form" action="#" method="get" novalidate>
+          <div>
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" autocomplete="name" required aria-describedby="c-name-error">
+            <p class="error" id="c-name-error"></p>
+          </div>
+          <div>
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="c-email-error">
+            <p class="error" id="c-email-error"></p>
+          </div>
+          <div>
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="5" required aria-describedby="c-message-error"></textarea>
+            <p class="error" id="c-message-error"></p>
+          </div>
+          <button type="submit">Send message</button>
+          <p class="notice" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="shell">
+      <p>© <span data-year>2026</span> Riley Quinn (placeholder name). Built with plain HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>
